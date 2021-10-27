@@ -1,3 +1,9 @@
+
+    % make llvm
+This will generate the src/redis-server.bc and src/redis-client.bc llvm file. We are interested in redis-server.bc as it is responsible for updating database
+
+    % make llvm_exe
+This will create executable src/redis-client and src/redis-cli from llvm output. (just to cross check llvm file are right)
 This README is just a fast *quick start* document. You can find more detailed documentation at [redis.io](https://redis.io).
 
 What is Redis?
