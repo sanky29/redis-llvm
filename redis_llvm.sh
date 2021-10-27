@@ -1,5 +1,6 @@
-cd deps/jemalloc
-make
+cd deps
+make jemalloc
+cd jemalloc
 clang -std=gnu11 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -emit-llvm -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/arena.sym.o src/arena.c
 clang -std=gnu11 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -emit-llvm -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/background_thread.sym.o src/background_thread.c
 clang -std=gnu11 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -emit-llvm -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/base.sym.o src/base.c
